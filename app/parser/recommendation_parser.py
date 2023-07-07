@@ -37,26 +37,15 @@ class RecommendationParser(BaseParser):
                 self.log_error(46, asin_rec, "asin", "Recommendation ASIN not found")
                 return
 
-            if (
-                self.fetch_from_table(
-                    self.TABLE_NAME,
-                    {
-                        "product_id": product_id,
-                        "recommended_product_id": rec_id,
-                    },
-                    columns=["*"],
-                )
-                is not None
-            ):
-                continue
-
             try:
-                self.insert_into_table(
+                self.get_or_insert_id(
                     self.TABLE_NAME,
                     {
                         "product_id": product_id,
                         "recommended_product_id": rec_id,
                     },
+                    ["product_id", "recommended_product_id"],
+                    return_id=False,
                 )
             except Exception as e:
                 print(traceback.format_exc())

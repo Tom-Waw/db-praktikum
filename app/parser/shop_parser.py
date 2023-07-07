@@ -34,36 +34,33 @@ class ShopParser(BaseParser):
             self.log_error(40, name, "name", "Missing name, street, or zipcode")
             return
 
-        shop_id = self.fetch_from_table(self.SHOP_TABLE_NAME, {"name": name})
-        if shop_id is None:
-            try:
-                self.insert_into_table(
-                    self.ADDRESS_TABLE_NAME,
-                    {
-                        "street": street,
-                        "zip": zipcode,
-                    },
-                )
-                address_id = self.cursor.lastrowid
-                print(address_id)
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(41, name, "INSERT Address", str(e))
-                return
+        try:
+            address_id = self.get_or_insert_id(
+                self.ADDRESS_TABLE_NAME,
+                {
+                    "street": street,
+                    "zip": zipcode,
+                },
+                [],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(41, name, "INSERT Address", str(e))
+            return
 
-            try:
-                self.insert_into_table(
-                    self.SHOP_TABLE_NAME,
-                    {
-                        "name": name,
-                        "address_id": address_id,
-                    },
-                )
-                shop_id = self.cursor.lastrowid
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(42, name, "INSERT shop", str(e))
-                return
+        try:
+            shop_id = self.get_or_insert_id(
+                self.SHOP_TABLE_NAME,
+                {
+                    "name": name,
+                    "address_id": address_id,
+                },
+                ["name"],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(42, name, "INSERT shop", str(e))
+            return
 
         self.conn.commit()
 
@@ -91,23 +88,21 @@ class ShopParser(BaseParser):
         image = root.attrib.get("picture", None)
         sales_rank = int(x) if (x := root.attrib.pop("salesrank", None)) else None
 
-        product_id = self.fetch_from_table(self.PRODUCT_TABLE_NAME, {"asin": asin})
-        if product_id is None:
-            try:
-                self.insert_into_table(
-                    self.PRODUCT_TABLE_NAME,
-                    {
-                        "asin": asin,
-                        "name": name,
-                        "image": image,
-                        "rank": sales_rank,
-                    },
-                )
-                product_id = self.cursor.lastrowid
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(17, asin, "INSERT", str(e))
-                return
+        try:
+            product_id = self.get_or_insert_id(
+                self.PRODUCT_TABLE_NAME,
+                {
+                    "asin": asin,
+                    "name": name,
+                    "image": image,
+                    "rank": sales_rank,
+                },
+                ["asin"],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(17, asin, "INSERT", str(e))
+            return
 
         if pgroup == "Music":
             self.handle_music(root, asin, product_id)
@@ -127,34 +122,25 @@ class ShopParser(BaseParser):
             self.log_error(38, asin, "state", "Invalid state")
             return
 
-        if self.fetch_from_table(self.REL_TABLE_NAME, data, columns=["*"]) is not None:
-            return
-
         try:
-            data = {
-                "product_id": product_id,
-                "shop_id": shop_id,
-                "price": price,
-                "state": state,
-                "stock": stock,
-            }
-            self.insert_into_table(self.REL_TABLE_NAME, data)
-            self.conn.commit()
+            self.get_or_insert_id(
+                self.REL_TABLE_NAME,
+                {
+                    "product_id": product_id,
+                    "shop_id": shop_id,
+                    "price": price,
+                    "state": state,
+                    "stock": stock,
+                },
+                ["product_id", "shop_id"],
+                return_id=False,
+            )
         except Exception as e:
             print(traceback.format_exc())
             self.log_error(39, asin, "INSERT Branch to Product", str(e))
-
-    def handle_music(self, item, asin, product_id):
-        if (
-            self.fetch_from_table(
-                self.CD_TABLE_NAME,
-                {"product_id": product_id},
-                columns=["*"],
-            )
-            is not None
-        ):
             return
 
+    def handle_music(self, item, asin, product_id):
         label = max(
             [x.attrib.get("name", "") for x in item.find("labels")],
             key=len,
@@ -177,13 +163,15 @@ class ShopParser(BaseParser):
         artists = [artist.attrib.get("name") for artist in item.find("artists")]
 
         try:
-            self.insert_into_table(
+            self.get_or_insert_id(
                 self.CD_TABLE_NAME,
                 {
                     "product_id": product_id,
                     "label": label,
                     "date_published": date_published,
                 },
+                ["product_id"],
+                return_id=False,
             )
         except Exception as e:
             print(traceback.format_exc())
@@ -192,29 +180,38 @@ class ShopParser(BaseParser):
 
         for track in tracks:
             try:
-                self.insert_into_table(
+                self.get_or_insert_id(
                     self.TRACK_TABLE_NAME,
                     {"cd_id": product_id, "title": track},
+                    [],
+                    return_id=False,
                 )
             except Exception as e:
                 print(traceback.format_exc())
                 self.log_error(21, asin, f"INSERT Track: {track}", str(e))
 
         for artist in artists:
-            artist_id = self.fetch_from_table(self.PERSON_TABLE_NAME, {"name": artist})
-            if artist_id is None:
-                try:
-                    self.insert_into_table(self.PERSON_TABLE_NAME, {"name": artist})
-                    artist_id = self.cursor.lastrowid
-                except Exception as e:
-                    print(traceback.format_exc())
-                    self.log_error(22, artist, f"INSERT Artist: {artist}", str(e))
-                    continue
+            try:
+                artist_id = self.get_or_insert_id(
+                    self.PERSON_TABLE_NAME,
+                    {"name": artist},
+                    ["name"],
+                )
+            except Exception as e:
+                print(traceback.format_exc())
+                self.log_error(22, artist, f"INSERT Artist: {artist}", str(e))
+                continue
 
             try:
-                self.insert_into_table(
+                self.get_or_insert_id(
                     self.PERSON_REL_TABLE_NAME,
-                    {"person_id": artist_id, "product_id": product_id},
+                    {
+                        "person_id": artist_id,
+                        "product_id": product_id,
+                        "role": "ARTIST",
+                    },
+                    ["person_id", "product_id", "role"],
+                    return_id=False,
                 )
             except Exception as e:
                 print(traceback.format_exc())
@@ -222,16 +219,6 @@ class ShopParser(BaseParser):
                 continue
 
     def handle_dvd(self, item, asin, product_id):
-        if (
-            self.fetch_from_table(
-                self.DVD_TABLE_NAME,
-                {"product_id": product_id},
-                columns=["*"],
-            )
-            is not None
-        ):
-            return
-
         dvd_data = item.find("dvdspec")
         format = dvd_data.find("format").text
         if not format:
@@ -261,7 +248,7 @@ class ShopParser(BaseParser):
         ]
 
         try:
-            self.insert_into_table(
+            self.get_or_insert_id(
                 self.DVD_TABLE_NAME,
                 {
                     "product_id": product_id,
@@ -269,6 +256,8 @@ class ShopParser(BaseParser):
                     "duration": duration,
                     "region_code": region_code,
                 },
+                ["product_id"],
+                return_id=False,
             )
         except Exception as e:
             print(traceback.format_exc())
@@ -276,38 +265,27 @@ class ShopParser(BaseParser):
             return
 
         for person, role in involved_people:
-            person_id = self.fetch_from_table(self.PERSON_TABLE_NAME, {"name": person})
-            if person_id is None:
-                try:
-                    self.insert_into_table(self.PERSON_TABLE_NAME, {"name": person})
-                    person_id = self.cursor.lastrowid
-                except Exception as e:
-                    print(traceback.format_exc())
-                    self.log_error(28, person, "INSERT Person", str(e))
-                    continue
-
-            if (
-                self.fetch_from_table(
-                    self.PERSON_REL_TABLE_NAME,
-                    {
-                        "person_id": person_id,
-                        "product_id": product_id,
-                        "role": role,
-                    },
-                    columns=["*"],
+            try:
+                person_id = self.get_or_insert_id(
+                    self.PERSON_TABLE_NAME,
+                    {"name": person},
+                    ["name"],
                 )
-                is not None
-            ):
+            except Exception as e:
+                print(traceback.format_exc())
+                self.log_error(28, person, "INSERT Person", str(e))
                 continue
 
             try:
-                self.insert_into_table(
+                self.get_or_insert_id(
                     self.PERSON_REL_TABLE_NAME,
                     {
                         "person_id": person_id,
                         "product_id": product_id,
                         "role": role,
                     },
+                    ["person_id", "product_id", "role"],
+                    return_id=False,
                 )
             except Exception as e:
                 print(traceback.format_exc())
@@ -315,16 +293,6 @@ class ShopParser(BaseParser):
                 continue
 
     def handle_book(self, item, asin, product_id):
-        if (
-            self.fetch_from_table(
-                self.BOOK_TABLE_NAME,
-                {"product_id": product_id},
-                columns=["*"],
-            )
-            is not None
-        ):
-            return
-
         book_data = item.find("bookspec")
         isbn = book_data.find("isbn").attrib.get("val", None)
         if not isbn:
@@ -332,7 +300,7 @@ class ShopParser(BaseParser):
             return
 
         n_pages_str = book_data.find("pages").text
-        if not n_pages:
+        if not n_pages_str:
             self.log_error(31, asin, "n_pages", "Missing number of pages")
             return
         n_pages = int(n_pages_str)
@@ -356,21 +324,19 @@ class ShopParser(BaseParser):
 
         authors = [a.attrib.pop("name") for a in item.find("authors")]
 
-        publisher_id = self.fetch_from_table(
-            self.PUBLISHER_TABLE_NAME,
-            {"name": publisher},
-        )
-        if publisher_id is None:
-            try:
-                self.insert_into_table(self.PUBLISHER_TABLE_NAME, {"name": publisher})
-                publisher_id = self.cursor.lastrowid
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(34, publisher, "INSERT Publisher", str(e))
-                return
+        try:
+            publisher_id = self.get_or_insert_id(
+                self.PUBLISHER_TABLE_NAME,
+                {"name": publisher},
+                ["name"],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(34, publisher, "INSERT Publisher", str(e))
+            return
 
         try:
-            self.insert_into_table(
+            self.get_or_insert_id(
                 self.BOOK_TABLE_NAME,
                 {
                     "product_id": product_id,
@@ -379,6 +345,8 @@ class ShopParser(BaseParser):
                     "date_published": date_published,
                     "publisher_id": publisher_id,
                 },
+                ["product_id"],
+                return_id=False,
             )
         except Exception as e:
             print(traceback.format_exc())
@@ -386,29 +354,27 @@ class ShopParser(BaseParser):
             return
 
         for author in authors:
-            author_id = self.fetch_from_table(self.PERSON_TABLE_NAME, {"name": author})
-            if author_id is not None:
-                continue
-
             try:
-                self.insert_into_table(
-                    self.PERSON_REL_TABLE_NAME,
-                    {"person_id": author_id, "product_id": product_id},
+                author_id = self.get_or_insert_id(
+                    self.PERSON_TABLE_NAME,
+                    {"name": author},
+                    ["name"],
                 )
-                author_id = self.cursor.lastrowid
             except Exception as e:
                 print(traceback.format_exc())
                 self.log_error(36, author, "INSERT Author", str(e))
                 continue
 
             try:
-                self.insert_into_table(
+                self.get_or_insert_id(
                     self.PERSON_REL_TABLE_NAME,
                     {
                         "person_id": author_id,
                         "product_id": product_id,
                         "role": "AUTHOR",
                     },
+                    ["person_id", "product_id", "role"],
+                    return_id=False,
                 )
             except Exception as e:
                 print(traceback.format_exc())

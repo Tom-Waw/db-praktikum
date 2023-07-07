@@ -28,19 +28,19 @@ class CategoryParser(BaseParser):
             self.log_error(9, "Category", "name", "Missing name")
             return
 
-        data = {
-            "name": name,
-            "parent_id": parent_id,
-        }
-        category_id = self.fetch_from_table(self.TABLE_NAME, data)
-        if category_id is None:
-            try:
-                self.insert_into_table(self.TABLE_NAME, data)
-                category_id = self.cursor.lastrowid
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(10, name, "INSERT Category", str(e))
-                return
+        try:
+            category_id = self.get_or_insert_id(
+                self.TABLE_NAME,
+                {
+                    "name": name,
+                    "parent_id": parent_id,
+                },
+                ["name", "parent_id"],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(10, name, "INSERT Category", str(e))
+            return
 
         self.parse(item, category_id)
 
@@ -66,12 +66,14 @@ class CategoryParser(BaseParser):
             return
 
         try:
-            self.insert_into_table(
+            self.get_or_insert_id(
                 self.REL_TABLE_NAME,
                 {
                     "product_id": product_id,
                     "category_id": parent_id,
                 },
+                ["product_id", "category_id"],
+                return_id=False,
             )
         except Exception as e:
             print(traceback.format_exc())

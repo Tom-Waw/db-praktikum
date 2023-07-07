@@ -39,32 +39,19 @@ class ReviewParser(BaseParser):
             self.log_error(6, review_data["asin"], "asin", "Missing reviewed product")
             return
 
-        customer_id = self.fetch_from_table(
-            self.CUSTOMER_TABLE_NAME, {"name": review_data["user"]}
-        )
-        if customer_id is None:
-            try:
-                self.insert_into_table(
-                    self.CUSTOMER_TABLE_NAME, {"name": review_data["user"]}
-                )
-                customer_id = self.cursor.lastrowid
-            except Exception as e:
-                print(traceback.format_exc())
-                self.log_error(7, review_data["user"], "INSERT Customer", str(e))
-                return
-
-        fetch_data = {
-            "customer_id": customer_id,
-            "product_id": product_id,
-        }
-        if (
-            self.fetch_from_table(self.REVIEW_TABLE_NAME, fetch_data, columns=["*"])
-            is not None
-        ):
+        try:
+            customer_id = self.get_or_insert_id(
+                self.CUSTOMER_TABLE_NAME,
+                {"name": review_data["user"]},
+                ["name"],
+            )
+        except Exception as e:
+            print(traceback.format_exc())
+            self.log_error(7, review_data["user"], "INSERT Customer", str(e))
             return
 
         try:
-            self.insert_into_table(
+            self.get_or_insert_id(
                 self.REVIEW_TABLE_NAME,
                 {
                     "customer_id": customer_id,
@@ -73,6 +60,8 @@ class ReviewParser(BaseParser):
                     "summary": review_data["summary"],
                     "content": review_data["content"],
                 },
+                [],
+                return_id=False,
             )
         except Exception as e:
             print(traceback.format_exc())

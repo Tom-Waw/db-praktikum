@@ -11,12 +11,12 @@ import psycopg2
 from psycopg2 import OperationalError
 
 # Logging setup
-logging.basicConfig(
-    filename="errors.log",
-    filemode="w",
-    format="%(message)s",
-    level=logging.ERROR,
-)
+# logging.basicConfig(
+#     filename="errors.log",
+#     filemode="w",
+#     format="%(message)s",
+#     level=logging.ERROR,
+# )
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "data")
 

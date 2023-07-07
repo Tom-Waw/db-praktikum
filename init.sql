@@ -74,9 +74,9 @@ CREATE TABLE person_product (
 CREATE OR REPLACE FUNCTION set_role()
 RETURNS TRIGGER AS $$
 BEGIN
-    IF TG_TABLE_NAME = 'books' THEN
+    IF EXISTS (SELECT 1 FROM books WHERE product_id = NEW.product_id) THEN
         NEW.role = 'AUTHOR';
-    ELSIF TG_TABLE_NAME = 'cds' THEN
+    ELSIF EXISTS (SELECT 1 FROM cds WHERE product_id = NEW.product_id) THEN
         NEW.role = 'ARTIST';
     END IF;
     RETURN NEW;
@@ -115,7 +115,7 @@ CREATE TABLE shops (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) UNIQUE NOT NULL,
     address_id INTEGER NOT NULL,
-    FOREIGN KEY (address_id) REFERENCES addresses(id) ON DELETE CASCADE
+    FOREIGN KEY (address_id) REFERENCES addresses(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE shop_product (
@@ -150,12 +150,12 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE reviews (
+    id SERIAL PRIMARY KEY,
     customer_id INTEGER NOT NULL,
     product_id INTEGER NOT NULL,
     rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
     summary VARCHAR(255) NOT NULL,
     content TEXT NOT NULL,
-    PRIMARY KEY (product_id, customer_id),
     FOREIGN KEY (customer_id) REFERENCES customers(id) ON DELETE CASCADE,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
