@@ -31,10 +31,7 @@ class BaseParser(ABC):
 
     # Function to handle all sql select queries
     def fetch_from_table(self, table_name, data, columns=None):
-        if columns is None:
-            select = "id"
-        else:
-            select = ", ".join(columns)
+        select = "id" if columns is None else "1"
 
         condition = " AND ".join(
             [
