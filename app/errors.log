@@ -1,6 +1,36 @@
+Chris D'Lacey (INSERT Author to Book): 37 1062 (23000): Duplicate entry '2-2-AUTHOR' for key 'person_product.PRIMARY'
+
+Linda Newbery (INSERT Author to Book): 37 1062 (23000): Duplicate entry '3-2-AUTHOR' for key 'person_product.PRIMARY'
+
+Melody Beattie (INSERT Author to Book): 37 1062 (23000): Duplicate entry '4-3-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-4-AUTHOR' for key 'person_product.PRIMARY'
+
+Angelika Feilhauer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '6-5-AUTHOR' for key 'person_product.PRIMARY'
+
+J.K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '7-6-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-7-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-8-AUTHOR' for key 'person_product.PRIMARY'
+
+Kristin Dahl (INSERT Author to Book): 37 1062 (23000): Duplicate entry '9-9-AUTHOR' for key 'person_product.PRIMARY'
+
+Mati Lepp (INSERT Author to Book): 37 1062 (23000): Duplicate entry '10-9-AUTHOR' for key 'person_product.PRIMARY'
+
 B00005YH0L (date_published): 19 Missing date published
 
 B0000061MY (date_published): 19 Missing date published
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-12-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-12-AUTHOR' for key 'person_product.PRIMARY'
+
+Clive St. Lewis (INSERT Author to Book): 37 1062 (23000): Duplicate entry '12-13-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Neudert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '13-14-AUTHOR' for key 'person_product.PRIMARY'
+
+Klaus Baumgart (INSERT Author to Book): 37 1062 (23000): Duplicate entry '14-14-AUTHOR' for key 'person_product.PRIMARY'
 
 389830695X (n_pages): 31 Missing number of pages
 
@@ -36,7 +66,7 @@ B000AMF7XI (isbn): 30 Missing ISBN
 
 B0001XLXRU (label): 18 Missing label
 
-the Pogues (INSERT Artist to Product): 23 1062 (23000): Duplicate entry '117-157-ARTIST' for key 'person_product.PRIMARY'
+the Pogues (INSERT Artist to Product): 23 1062 (23000): Duplicate entry '1238-3407-ARTIST' for key 'person_product.PRIMARY'
 
 B0006957SA (INSERT Branch to Product): 39 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`media_store`.`branch_product`, CONSTRAINT `branch_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
 
@@ -80,43 +110,179 @@ B00006GEL7 (date_published): 19 Missing date published
 
 B0000015IZ (date_published): 19 Missing date published
 
+Joanne K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '379-461-AUTHOR' for key 'person_product.PRIMARY'
+
+Maximilian Canepa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '384-472-AUTHOR' for key 'person_product.PRIMARY'
+
 B000003LW1 (label): 18 Missing label
 
 B0009MWB60 (label): 18 Missing label
 
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-496-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-497-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-499-AUTHOR' for key 'person_product.PRIMARY'
+
 3899406788 (n_pages): 31 Missing number of pages
+
+Clive St. Lewis (INSERT Author to Book): 37 1062 (23000): Duplicate entry '12-501-AUTHOR' for key 'person_product.PRIMARY'
+
+Joanne K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '379-502-AUTHOR' for key 'person_product.PRIMARY'
+
+Joanne K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '379-503-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-504-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-505-AUTHOR' for key 'person_product.PRIMARY'
+
+Joanne K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '379-506-AUTHOR' for key 'person_product.PRIMARY'
+
+Luc Jacquet (INSERT Author to Book): 37 1062 (23000): Duplicate entry '402-507-AUTHOR' for key 'person_product.PRIMARY'
 
 3895849995 (n_pages): 31 Missing number of pages
 
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-509-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-510-AUTHOR' for key 'person_product.PRIMARY'
+
+Paul Maar (INSERT Author to Book): 37 1062 (23000): Duplicate entry '403-511-AUTHOR' for key 'person_product.PRIMARY'
+
+Andreas Steinhöfel (INSERT Author to Book): 37 1062 (23000): Duplicate entry '404-512-AUTHOR' for key 'person_product.PRIMARY'
+
+Julia Boehme (INSERT Author to Book): 37 1062 (23000): Duplicate entry '405-513-AUTHOR' for key 'person_product.PRIMARY'
+
+Isabel Abedi (INSERT Author to Book): 37 1062 (23000): Duplicate entry '406-514-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-515-AUTHOR' for key 'person_product.PRIMARY'
+
+Barbara Robinson (INSERT Author to Book): 37 1062 (23000): Duplicate entry '407-516-AUTHOR' for key 'person_product.PRIMARY'
+
+Robin (INSERT Author to Book): 37 1062 (23000): Duplicate entry '408-516-AUTHOR' for key 'person_product.PRIMARY'
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-517-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-517-AUTHOR' for key 'person_product.PRIMARY'
+
 3895847011 (n_pages): 31 Missing number of pages
+
+Marcel Reich- Ranicki (INSERT Author to Book): 37 1062 (23000): Duplicate entry '409-519-AUTHOR' for key 'person_product.PRIMARY'
+
+Marcel Reich-Ranicki (INSERT Author to Book): 37 1062 (23000): Duplicate entry '410-519-AUTHOR' for key 'person_product.PRIMARY'
+
+Ulf Blanck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '411-520-AUTHOR' for key 'person_product.PRIMARY'
+
+Peter (INSERT Author to Book): 37 1062 (23000): Duplicate entry '412-521-AUTHOR' for key 'person_product.PRIMARY'
+
+Peter Freund (INSERT Author to Book): 37 1062 (23000): Duplicate entry '413-521-AUTHOR' for key 'person_product.PRIMARY'
+
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-522-AUTHOR' for key 'person_product.PRIMARY'
 
 3593376946 (n_pages): 31 Missing number of pages
 
+Ernest Drake (INSERT Author to Book): 37 1062 (23000): Duplicate entry '415-524-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-525-AUTHOR' for key 'person_product.PRIMARY'
+
+Kirsten Boie (INSERT Author to Book): 37 1062 (23000): Duplicate entry '416-526-AUTHOR' for key 'person_product.PRIMARY'
+
 3866151187 (n_pages): 31 Missing number of pages
+
+Knister (INSERT Author to Book): 37 1062 (23000): Duplicate entry '417-528-AUTHOR' for key 'person_product.PRIMARY'
 
 3898303039 (n_pages): 31 Missing number of pages
 
 3895847038 (n_pages): 31 Missing number of pages
 
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-531-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-531-AUTHOR' for key 'person_product.PRIMARY'
+
 386615111X (n_pages): 31 Missing number of pages
+
+Stephen W. Hawking (INSERT Author to Book): 37 1062 (23000): Duplicate entry '418-533-AUTHOR' for key 'person_product.PRIMARY'
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-534-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-534-AUTHOR' for key 'person_product.PRIMARY'
 
 3866151071 (n_pages): 31 Missing number of pages
 
+Kirsten Boie (INSERT Author to Book): 37 1062 (23000): Duplicate entry '416-536-AUTHOR' for key 'person_product.PRIMARY'
+
+Felix Janosa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '419-537-AUTHOR' for key 'person_product.PRIMARY'
+
+Jörg Hilbert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '420-537-AUTHOR' for key 'person_product.PRIMARY'
+
+Christine Nöstlinger (INSERT Author to Book): 37 1062 (23000): Duplicate entry '421-538-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-539-AUTHOR' for key 'person_product.PRIMARY'
+
 3866040733 (n_pages): 31 Missing number of pages
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-541-AUTHOR' for key 'person_product.PRIMARY'
+
+Erhard Dietl (INSERT Author to Book): 37 1062 (23000): Duplicate entry '422-542-AUTHOR' for key 'person_product.PRIMARY'
 
 3866151098 (n_pages): 31 Missing number of pages
 
 3898304590 (n_pages): 31 Missing number of pages
 
+Charles E. Mortimer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '423-546-AUTHOR' for key 'person_product.PRIMARY'
+
+Ulrich Müller (INSERT Author to Book): 37 1062 (23000): Duplicate entry '424-546-AUTHOR' for key 'person_product.PRIMARY'
+
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-547-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Neudert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '13-548-AUTHOR' for key 'person_product.PRIMARY'
+
+Klaus Baumgart (INSERT Author to Book): 37 1062 (23000): Duplicate entry '14-548-AUTHOR' for key 'person_product.PRIMARY'
+
 3800051664 (n_pages): 31 Missing number of pages
+
+Sven Nordqvist (INSERT Author to Book): 37 1062 (23000): Duplicate entry '426-550-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-551-AUTHOR' for key 'person_product.PRIMARY'
+
+Annette Langen (INSERT Author to Book): 37 1062 (23000): Duplicate entry '427-552-AUTHOR' for key 'person_product.PRIMARY'
+
+Constanza Droop (INSERT Author to Book): 37 1062 (23000): Duplicate entry '428-552-AUTHOR' for key 'person_product.PRIMARY'
+
+Martin Zimmermann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '429-553-AUTHOR' for key 'person_product.PRIMARY'
 
 3866040156 (n_pages): 31 Missing number of pages
 
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-555-AUTHOR' for key 'person_product.PRIMARY'
+
 3785555474 (n_pages): 31 Missing number of pages
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-557-AUTHOR' for key 'person_product.PRIMARY'
+
+Claudia Feldmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '430-558-AUTHOR' for key 'person_product.PRIMARY'
+
+Eoin Colfer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '431-558-AUTHOR' for key 'person_product.PRIMARY'
 
 3833959819 (n_pages): 31 Missing number of pages
 
+Eoin Colfer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '431-560-AUTHOR' for key 'person_product.PRIMARY'
+
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-561-AUTHOR' for key 'person_product.PRIMARY'
+
+Brian Hill (INSERT Author to Book): 37 1062 (23000): Duplicate entry '432-562-AUTHOR' for key 'person_product.PRIMARY'
+
+Stephanie Rybak (INSERT Author to Book): 37 1062 (23000): Duplicate entry '433-562-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-563-AUTHOR' for key 'person_product.PRIMARY'
+
+Luca Novelli (INSERT Author to Book): 37 1062 (23000): Duplicate entry '434-564-AUTHOR' for key 'person_product.PRIMARY'
+
 3866151179 (n_pages): 31 Missing number of pages
+
+Ashley Carrington (INSERT Author to Book): 37 1062 (23000): Duplicate entry '435-566-AUTHOR' for key 'person_product.PRIMARY'
+
+Rainer M. Schröder (INSERT Author to Book): 37 1062 (23000): Duplicate entry '436-566-AUTHOR' for key 'person_product.PRIMARY'
+
+Gaby Hauptmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '437-567-AUTHOR' for key 'person_product.PRIMARY'
 
 051 (n_pages): 31 Missing number of pages
 
@@ -124,65 +290,375 @@ B0009MWB60 (label): 18 Missing label
 
 3466457513 (n_pages): 31 Missing number of pages
 
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-573-AUTHOR' for key 'person_product.PRIMARY'
+
 3866040687 (n_pages): 31 Missing number of pages
+
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-575-AUTHOR' for key 'person_product.PRIMARY'
+
+Daniela Nase (INSERT Author to Book): 37 1062 (23000): Duplicate entry '438-576-AUTHOR' for key 'person_product.PRIMARY'
+
+Nas (INSERT Author to Book): 37 1062 (23000): Duplicate entry '439-576-AUTHOR' for key 'person_product.PRIMARY'
 
 3866040555 (n_pages): 31 Missing number of pages
 
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-578-AUTHOR' for key 'person_product.PRIMARY'
+
+Anita van Saan (INSERT Author to Book): 37 1062 (23000): Duplicate entry '440-579-AUTHOR' for key 'person_product.PRIMARY'
+
 3899407180 (n_pages): 31 Missing number of pages
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-581-AUTHOR' for key 'person_product.PRIMARY'
+
+Felix Janosa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '419-582-AUTHOR' for key 'person_product.PRIMARY'
+
+Jörg Hilbert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '420-582-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Brezina (INSERT Author to Book): 37 1062 (23000): Duplicate entry '441-583-AUTHOR' for key 'person_product.PRIMARY'
 
 3899035119 (n_pages): 31 Missing number of pages
 
+Isabel Abedi (INSERT Author to Book): 37 1062 (23000): Duplicate entry '406-585-AUTHOR' for key 'person_product.PRIMARY'
+
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-586-AUTHOR' for key 'person_product.PRIMARY'
+
+Eoin Colfer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '431-587-AUTHOR' for key 'person_product.PRIMARY'
+
+Tony Ross (INSERT Author to Book): 37 1062 (23000): Duplicate entry '442-587-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Kinkade (INSERT Author to Book): 37 1062 (23000): Duplicate entry '443-588-AUTHOR' for key 'person_product.PRIMARY'
+
+Thilo Pustlauk (INSERT Author to Book): 37 1062 (23000): Duplicate entry '444-589-AUTHOR' for key 'person_product.PRIMARY'
+
 386615108X (n_pages): 31 Missing number of pages
+
+Jenny Nimmo (INSERT Author to Book): 37 1062 (23000): Duplicate entry '445-591-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-592-AUTHOR' for key 'person_product.PRIMARY'
+
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-593-AUTHOR' for key 'person_product.PRIMARY'
+
+Knister (INSERT Author to Book): 37 1062 (23000): Duplicate entry '417-594-AUTHOR' for key 'person_product.PRIMARY'
 
 340780945X (n_pages): 31 Missing number of pages
 
+Edel (INSERT Author to Book): 37 1062 (23000): Duplicate entry '446-596-AUTHOR' for key 'person_product.PRIMARY'
+
 3866151160 (n_pages): 31 Missing number of pages
+
+Barbara Poche (INSERT Author to Book): 37 1062 (23000): Duplicate entry '447-598-AUTHOR' for key 'person_product.PRIMARY'
+
+Norman Filz (INSERT Author to Book): 37 1062 (23000): Duplicate entry '448-598-AUTHOR' for key 'person_product.PRIMARY'
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-600-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-600-AUTHOR' for key 'person_product.PRIMARY'
+
+Ac (INSERT Author to Book): 37 1062 (23000): Duplicate entry '276-601-AUTHOR' for key 'person_product.PRIMARY'
+
+Achim Bröger (INSERT Author to Book): 37 1062 (23000): Duplicate entry '449-601-AUTHOR' for key 'person_product.PRIMARY'
 
 3491911818 (n_pages): 31 Missing number of pages
 
+Isabel Abedi (INSERT Author to Book): 37 1062 (23000): Duplicate entry '406-603-AUTHOR' for key 'person_product.PRIMARY'
+
+Knister (INSERT Author to Book): 37 1062 (23000): Duplicate entry '417-604-AUTHOR' for key 'person_product.PRIMARY'
+
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-605-AUTHOR' for key 'person_product.PRIMARY'
+
+Ulf Blanck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '411-606-AUTHOR' for key 'person_product.PRIMARY'
+
+James Krüss (INSERT Author to Book): 37 1062 (23000): Duplicate entry '450-607-AUTHOR' for key 'person_product.PRIMARY'
+
+Ian Ogilvy (INSERT Author to Book): 37 1062 (23000): Duplicate entry '451-608-AUTHOR' for key 'person_product.PRIMARY'
+
+Felix Janosa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '419-609-AUTHOR' for key 'person_product.PRIMARY'
+
+Jörg Hilbert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '420-609-AUTHOR' for key 'person_product.PRIMARY'
+
+Charles Dickens (INSERT Author to Book): 37 1062 (23000): Duplicate entry '452-610-AUTHOR' for key 'person_product.PRIMARY'
+
 3593379031 (n_pages): 31 Missing number of pages
+
+Lauren Brooke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '453-612-AUTHOR' for key 'person_product.PRIMARY'
 
 3866040113 (n_pages): 31 Missing number of pages
 
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-614-AUTHOR' for key 'person_product.PRIMARY'
+
+Clive St. Lewis (INSERT Author to Book): 37 1062 (23000): Duplicate entry '12-615-AUTHOR' for key 'person_product.PRIMARY'
+
 3899401719 (n_pages): 31 Missing number of pages
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-617-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Brezina (INSERT Author to Book): 37 1062 (23000): Duplicate entry '441-618-AUTHOR' for key 'person_product.PRIMARY'
+
+Paul Maar (INSERT Author to Book): 37 1062 (23000): Duplicate entry '403-619-AUTHOR' for key 'person_product.PRIMARY'
+
+Clive St. Lewis (INSERT Author to Book): 37 1062 (23000): Duplicate entry '12-620-AUTHOR' for key 'person_product.PRIMARY'
+
+Herbert A. Werner (INSERT Author to Book): 37 1062 (23000): Duplicate entry '454-621-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hirschfeld (INSERT Author to Book): 37 1062 (23000): Duplicate entry '455-621-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-622-AUTHOR' for key 'person_product.PRIMARY'
+
+Kai Meyer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '414-623-AUTHOR' for key 'person_product.PRIMARY'
 
 B0001WGER0 (isbn): 30 Missing ISBN
 
+Christiane Northrup (INSERT Author to Book): 37 1062 (23000): Duplicate entry '456-625-AUTHOR' for key 'person_product.PRIMARY'
+
+Brian Hill (INSERT Author to Book): 37 1062 (23000): Duplicate entry '432-626-AUTHOR' for key 'person_product.PRIMARY'
+
+Giovanni Carsaniga (INSERT Author to Book): 37 1062 (23000): Duplicate entry '457-626-AUTHOR' for key 'person_product.PRIMARY'
+
 3935036787 (n_pages): 31 Missing number of pages
+
+Holly-Jane Rahlens (INSERT Author to Book): 37 1062 (23000): Duplicate entry '458-628-AUTHOR' for key 'person_product.PRIMARY'
+
+Jan U. Holey (INSERT Author to Book): 37 1062 (23000): Duplicate entry '459-629-AUTHOR' for key 'person_product.PRIMARY'
+
+Jan van Helsing (INSERT Author to Book): 37 1062 (23000): Duplicate entry '460-629-AUTHOR' for key 'person_product.PRIMARY'
+
+Luca Novelli (INSERT Author to Book): 37 1062 (23000): Duplicate entry '434-630-AUTHOR' for key 'person_product.PRIMARY'
 
 3886985113 (n_pages): 31 Missing number of pages
 
+Al (INSERT Author to Book): 37 1062 (23000): Duplicate entry '34-632-AUTHOR' for key 'person_product.PRIMARY'
+
+Alfons Schuhbeck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '461-632-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Brezina (INSERT Author to Book): 37 1062 (23000): Duplicate entry '441-633-AUTHOR' for key 'person_product.PRIMARY'
+
+Marion Küstenmacher (INSERT Author to Book): 37 1062 (23000): Duplicate entry '462-634-AUTHOR' for key 'person_product.PRIMARY'
+
+Tiki Küstenmacher (INSERT Author to Book): 37 1062 (23000): Duplicate entry '463-634-AUTHOR' for key 'person_product.PRIMARY'
+
+Werner Küstenmacher (INSERT Author to Book): 37 1062 (23000): Duplicate entry '464-634-AUTHOR' for key 'person_product.PRIMARY'
+
+Thilo Pustlauk (INSERT Author to Book): 37 1062 (23000): Duplicate entry '444-635-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-637-AUTHOR' for key 'person_product.PRIMARY'
+
+Knister (INSERT Author to Book): 37 1062 (23000): Duplicate entry '417-638-AUTHOR' for key 'person_product.PRIMARY'
+
 3466456681 (n_pages): 31 Missing number of pages
+
+Carlo Collodi (INSERT Author to Book): 37 1062 (23000): Duplicate entry '465-640-AUTHOR' for key 'person_product.PRIMARY'
+
+Roberto Innocenti (INSERT Author to Book): 37 1062 (23000): Duplicate entry '466-640-AUTHOR' for key 'person_product.PRIMARY'
+
+Erhard Dietl (INSERT Author to Book): 37 1062 (23000): Duplicate entry '422-641-AUTHOR' for key 'person_product.PRIMARY'
+
+Anita van Saan (INSERT Author to Book): 37 1062 (23000): Duplicate entry '440-642-AUTHOR' for key 'person_product.PRIMARY'
+
+Charles Dickens (INSERT Author to Book): 37 1062 (23000): Duplicate entry '452-643-AUTHOR' for key 'person_product.PRIMARY'
+
+Erwin Riedel (INSERT Author to Book): 37 1062 (23000): Duplicate entry '467-644-AUTHOR' for key 'person_product.PRIMARY'
+
+Jean Marzollo (INSERT Author to Book): 37 1062 (23000): Duplicate entry '468-645-AUTHOR' for key 'person_product.PRIMARY'
+
+Walter Wick (INSERT Author to Book): 37 1062 (23000): Duplicate entry '469-645-AUTHOR' for key 'person_product.PRIMARY'
+
+Nicole (INSERT Author to Book): 37 1062 (23000): Duplicate entry '470-646-AUTHOR' for key 'person_product.PRIMARY'
+
+Nicole Würth (INSERT Author to Book): 37 1062 (23000): Duplicate entry '471-646-AUTHOR' for key 'person_product.PRIMARY'
+
+Sigrid Born (INSERT Author to Book): 37 1062 (23000): Duplicate entry '472-646-AUTHOR' for key 'person_product.PRIMARY'
+
+Jesper Juul (INSERT Author to Book): 37 1062 (23000): Duplicate entry '473-647-AUTHOR' for key 'person_product.PRIMARY'
+
+John Marsden (INSERT Author to Book): 37 1062 (23000): Duplicate entry '474-648-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Tarnowski (INSERT Author to Book): 37 1062 (23000): Duplicate entry '475-649-AUTHOR' for key 'person_product.PRIMARY'
+
+Annemie Hülchrath (INSERT Author to Book): 37 1062 (23000): Duplicate entry '476-650-AUTHOR' for key 'person_product.PRIMARY'
+
+Cordula Stratmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '477-650-AUTHOR' for key 'person_product.PRIMARY'
+
+Clive St. Lewis (INSERT Author to Book): 37 1062 (23000): Duplicate entry '12-651-AUTHOR' for key 'person_product.PRIMARY'
+
+Knister (INSERT Author to Book): 37 1062 (23000): Duplicate entry '417-652-AUTHOR' for key 'person_product.PRIMARY'
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-653-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-653-AUTHOR' for key 'person_product.PRIMARY'
+
+Gaby Hauptmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '437-654-AUTHOR' for key 'person_product.PRIMARY'
 
 3593376881 (n_pages): 31 Missing number of pages
 
+Birgit Pelzer- Reith (INSERT Author to Book): 37 1062 (23000): Duplicate entry '478-656-AUTHOR' for key 'person_product.PRIMARY'
+
+Birgit Pelzer-Reith (INSERT Author to Book): 37 1062 (23000): Duplicate entry '479-656-AUTHOR' for key 'person_product.PRIMARY'
+
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-657-AUTHOR' for key 'person_product.PRIMARY'
+
+Thorbjörn Egner (INSERT Author to Book): 37 1062 (23000): Duplicate entry '480-658-AUTHOR' for key 'person_product.PRIMARY'
+
+Martha C. Sammons (INSERT Author to Book): 37 1062 (23000): Duplicate entry '481-659-AUTHOR' for key 'person_product.PRIMARY'
+
+Dieter Kurth (INSERT Author to Book): 37 1062 (23000): Duplicate entry '482-660-AUTHOR' for key 'person_product.PRIMARY'
+
+Hermann Krekeler (INSERT Author to Book): 37 1062 (23000): Duplicate entry '483-661-AUTHOR' for key 'person_product.PRIMARY'
+
+Marlies Rieper- Bastian (INSERT Author to Book): 37 1062 (23000): Duplicate entry '484-661-AUTHOR' for key 'person_product.PRIMARY'
+
+Marlies Rieper-Bastian (INSERT Author to Book): 37 1062 (23000): Duplicate entry '485-661-AUTHOR' for key 'person_product.PRIMARY'
+
+Joachim Masannek (INSERT Author to Book): 37 1062 (23000): Duplicate entry '486-662-AUTHOR' for key 'person_product.PRIMARY'
+
+Enid Blyton (INSERT Author to Book): 37 1062 (23000): Duplicate entry '487-663-AUTHOR' for key 'person_product.PRIMARY'
+
+Andreas Diekmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '488-664-AUTHOR' for key 'person_product.PRIMARY'
+
 3866151101 (n_pages): 31 Missing number of pages
+
+Ulf Blanck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '411-666-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Neudert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '13-667-AUTHOR' for key 'person_product.PRIMARY'
+
+Klaus Baumgart (INSERT Author to Book): 37 1062 (23000): Duplicate entry '14-667-AUTHOR' for key 'person_product.PRIMARY'
+
+Nikolaus Lenz (INSERT Author to Book): 37 1062 (23000): Duplicate entry '489-668-AUTHOR' for key 'person_product.PRIMARY'
+
+Dorit U. Feddersen-Petersen (INSERT Author to Book): 37 1062 (23000): Duplicate entry '490-669-AUTHOR' for key 'person_product.PRIMARY'
+
+Peter (INSERT Author to Book): 37 1062 (23000): Duplicate entry '412-669-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-671-AUTHOR' for key 'person_product.PRIMARY'
 
 378910079X (n_pages): 31 Missing number of pages
 
+Tonke Dragt (INSERT Author to Book): 37 1062 (23000): Duplicate entry '491-673-AUTHOR' for key 'person_product.PRIMARY'
+
+Joachim Masannek (INSERT Author to Book): 37 1062 (23000): Duplicate entry '486-674-AUTHOR' for key 'person_product.PRIMARY'
+
 3876513006 (n_pages): 31 Missing number of pages
 
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-676-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-676-AUTHOR' for key 'person_product.PRIMARY'
+
+James Krüss (INSERT Author to Book): 37 1062 (23000): Duplicate entry '450-677-AUTHOR' for key 'person_product.PRIMARY'
+
+Erika Bock (INSERT Author to Book): 37 1062 (23000): Duplicate entry '492-678-AUTHOR' for key 'person_product.PRIMARY'
+
 389830583X (n_pages): 31 Missing number of pages
+
+S. F. Said (INSERT Author to Book): 37 1062 (23000): Duplicate entry '493-680-AUTHOR' for key 'person_product.PRIMARY'
+
+Helme Heine (INSERT Author to Book): 37 1062 (23000): Duplicate entry '494-681-AUTHOR' for key 'person_product.PRIMARY'
+
+Erhard Dietl (INSERT Author to Book): 37 1062 (23000): Duplicate entry '422-682-AUTHOR' for key 'person_product.PRIMARY'
+
+Susann Opel- Götz (INSERT Author to Book): 37 1062 (23000): Duplicate entry '495-683-AUTHOR' for key 'person_product.PRIMARY'
+
+Susann Opel-Götz (INSERT Author to Book): 37 1062 (23000): Duplicate entry '496-683-AUTHOR' for key 'person_product.PRIMARY'
+
+Susanne Klein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '497-683-AUTHOR' for key 'person_product.PRIMARY'
+
+Erich Kästner (INSERT Author to Book): 37 1062 (23000): Duplicate entry '498-684-AUTHOR' for key 'person_product.PRIMARY'
+
+Joachim Kaiser (INSERT Author to Book): 37 1062 (23000): Duplicate entry '499-685-AUTHOR' for key 'person_product.PRIMARY'
+
+Jacob Grimm (INSERT Author to Book): 37 1062 (23000): Duplicate entry '500-686-AUTHOR' for key 'person_product.PRIMARY'
+
+Wilhelm Grimm (INSERT Author to Book): 37 1062 (23000): Duplicate entry '501-686-AUTHOR' for key 'person_product.PRIMARY'
+
+Felix Janosa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '419-687-AUTHOR' for key 'person_product.PRIMARY'
+
+Jörg Hilbert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '420-687-AUTHOR' for key 'person_product.PRIMARY'
 
 3899401883 (n_pages): 31 Missing number of pages
 
 3893859861 (n_pages): 31 Missing number of pages
 
+Charlie Higson (INSERT Author to Book): 37 1062 (23000): Duplicate entry '502-690-AUTHOR' for key 'person_product.PRIMARY'
+
+Harry H. Harrison (INSERT Author to Book): 37 1062 (23000): Duplicate entry '503-691-AUTHOR' for key 'person_product.PRIMARY'
+
 3899400461 (n_pages): 31 Missing number of pages
 
+Angela Wilkes (INSERT Author to Book): 37 1062 (23000): Duplicate entry '504-693-AUTHOR' for key 'person_product.PRIMARY'
+
+Karl-Heinz Graf vo Rothenburg (INSERT Author to Book): 37 1062 (23000): Duplicate entry '505-693-AUTHOR' for key 'person_product.PRIMARY'
+
+Jean Ziegler (INSERT Author to Book): 37 1062 (23000): Duplicate entry '506-694-AUTHOR' for key 'person_product.PRIMARY'
+
+Christine Nöstlinger (INSERT Author to Book): 37 1062 (23000): Duplicate entry '421-695-AUTHOR' for key 'person_product.PRIMARY'
+
+Livi Michael (INSERT Author to Book): 37 1062 (23000): Duplicate entry '507-696-AUTHOR' for key 'person_product.PRIMARY'
+
+Bernd Flessner (INSERT Author to Book): 37 1062 (23000): Duplicate entry '508-697-AUTHOR' for key 'person_product.PRIMARY'
+
 3897154935 (n_pages): 31 Missing number of pages
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-699-AUTHOR' for key 'person_product.PRIMARY'
 
 3831814767 (n_pages): 31 Missing number of pages
 
 3866040059 (n_pages): 31 Missing number of pages
 
+Peter (INSERT Author to Book): 37 1062 (23000): Duplicate entry '412-702-AUTHOR' for key 'person_product.PRIMARY'
+
+Peter Freund (INSERT Author to Book): 37 1062 (23000): Duplicate entry '413-702-AUTHOR' for key 'person_product.PRIMARY'
+
+Luis Royo (INSERT Author to Book): 37 1062 (23000): Duplicate entry '509-703-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-704-AUTHOR' for key 'person_product.PRIMARY'
+
+Heike Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '11-705-AUTHOR' for key 'person_product.PRIMARY'
+
+Wolfgang Hohlbein (INSERT Author to Book): 37 1062 (23000): Duplicate entry '5-705-AUTHOR' for key 'person_product.PRIMARY'
+
 3898303446 (n_pages): 31 Missing number of pages
 
+Andreas Schlüter (INSERT Author to Book): 37 1062 (23000): Duplicate entry '510-708-AUTHOR' for key 'person_product.PRIMARY'
+
 B0001WGERU (isbn): 30 Missing ISBN
+
+Ulf Blanck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '411-710-AUTHOR' for key 'person_product.PRIMARY'
+
+Ralf Isau (INSERT Author to Book): 37 1062 (23000): Duplicate entry '511-711-AUTHOR' for key 'person_product.PRIMARY'
+
+Brian Hill (INSERT Author to Book): 37 1062 (23000): Duplicate entry '432-713-AUTHOR' for key 'person_product.PRIMARY'
+
+Stéphanie Rybak (INSERT Author to Book): 37 1062 (23000): Duplicate entry '433-713-AUTHOR' for key 'person_product.PRIMARY'
+
+Carl Hiaasen (INSERT Author to Book): 37 1062 (23000): Duplicate entry '512-714-AUTHOR' for key 'person_product.PRIMARY'
+
+Dav (INSERT Author to Book): 37 1062 (23000): Duplicate entry '29-715-AUTHOR' for key 'person_product.PRIMARY'
+
+David Macaulay (INSERT Author to Book): 37 1062 (23000): Duplicate entry '513-715-AUTHOR' for key 'person_product.PRIMARY'
+
+Neil Ardley (INSERT Author to Book): 37 1062 (23000): Duplicate entry '514-715-AUTHOR' for key 'person_product.PRIMARY'
 
 349188795X (n_pages): 31 Missing number of pages
 
 3899035100 (n_pages): 31 Missing number of pages
+
+Linda Chapman (INSERT Author to Book): 37 1062 (23000): Duplicate entry '515-719-AUTHOR' for key 'person_product.PRIMARY'
+
+Wighard Strehlow (INSERT Author to Book): 37 1062 (23000): Duplicate entry '516-720-AUTHOR' for key 'person_product.PRIMARY'
+
+Edmund Mudrak (INSERT Author to Book): 37 1062 (23000): Duplicate entry '517-721-AUTHOR' for key 'person_product.PRIMARY'
+
+Erich Kästner (INSERT Author to Book): 37 1062 (23000): Duplicate entry '498-722-AUTHOR' for key 'person_product.PRIMARY'
+
+Judith Kerr (INSERT Author to Book): 37 1062 (23000): Duplicate entry '518-723-AUTHOR' for key 'person_product.PRIMARY'
+
+Laureen Brooke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '519-724-AUTHOR' for key 'person_product.PRIMARY'
+
+Tonke Dragt (INSERT Author to Book): 37 1062 (23000): Duplicate entry '491-725-AUTHOR' for key 'person_product.PRIMARY'
+
+Linda Chapman (INSERT Author to Book): 37 1062 (23000): Duplicate entry '515-726-AUTHOR' for key 'person_product.PRIMARY'
+
+Christine Schulz- Reiss (INSERT Author to Book): 37 1062 (23000): Duplicate entry '520-727-AUTHOR' for key 'person_product.PRIMARY'
+
+Christine Schulz-Reiss (INSERT Author to Book): 37 1062 (23000): Duplicate entry '521-727-AUTHOR' for key 'person_product.PRIMARY'
 
 B000003LVO (date_published): 19 Missing date published
 
@@ -516,19 +992,51 @@ B0000047DA (date_published): 19 Missing date published
 
 3898134709 (n_pages): 31 Missing number of pages
 
+Louise L. Hay (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1080-1948-AUTHOR' for key 'person_product.PRIMARY'
+
 3898309703 (n_pages): 31 Missing number of pages
 
 3491886104 (n_pages): 31 Missing number of pages
 
+Marcus Würmli (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1081-1951-AUTHOR' for key 'person_product.PRIMARY'
+
 3593374536 (n_pages): 31 Missing number of pages
+
+Geoff Dunbar (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1082-1953-AUTHOR' for key 'person_product.PRIMARY'
+
+Harry Rowohlt (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1083-1953-AUTHOR' for key 'person_product.PRIMARY'
+
+Philip Ardagh (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1084-1953-AUTHOR' for key 'person_product.PRIMARY'
 
 3866151136 (n_pages): 31 Missing number of pages
 
+Hedwig M. Stuber (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1085-1955-AUTHOR' for key 'person_product.PRIMARY'
+
+Jules Verne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1086-1956-AUTHOR' for key 'person_product.PRIMARY'
+
+Jack London (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1087-1957-AUTHOR' for key 'person_product.PRIMARY'
+
 3491888077 (n_pages): 31 Missing number of pages
+
+Astrid Lindgren (INSERT Author to Book): 37 1062 (23000): Duplicate entry '425-1959-AUTHOR' for key 'person_product.PRIMARY'
+
+Annemarie Böll (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1088-1960-AUTHOR' for key 'person_product.PRIMARY'
+
+Judith Kerr (INSERT Author to Book): 37 1062 (23000): Duplicate entry '518-1960-AUTHOR' for key 'person_product.PRIMARY'
+
+Jean Marzollo (INSERT Author to Book): 37 1062 (23000): Duplicate entry '468-1961-AUTHOR' for key 'person_product.PRIMARY'
+
+Walter Wick (INSERT Author to Book): 37 1062 (23000): Duplicate entry '469-1961-AUTHOR' for key 'person_product.PRIMARY'
+
+Oetker (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1089-1962-AUTHOR' for key 'person_product.PRIMARY'
 
 3898134180 (n_pages): 31 Missing number of pages
 
 3593378973 (n_pages): 31 Missing number of pages
+
+Hennes Bender (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1090-1965-AUTHOR' for key 'person_product.PRIMARY'
+
+Jana Frey (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1091-1966-AUTHOR' for key 'person_product.PRIMARY'
 
 B00003G1O4 (date_published): 19 Missing date published
 
@@ -568,9 +1076,55 @@ B000001NS4 (label): 18 Missing label
 
 3491911575 (n_pages): 31 Missing number of pages
 
+Katherina Standhartinger (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1116-2056-AUTHOR' for key 'person_product.PRIMARY'
+
+Joanne K. Rowling (INSERT Author to Book): 37 1062 (23000): Duplicate entry '379-2074-AUTHOR' for key 'person_product.PRIMARY'
+
 3899407334 (n_pages): 31 Missing number of pages
 
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-2076-AUTHOR' for key 'person_product.PRIMARY'
+
+Brian Hill (INSERT Author to Book): 37 1062 (23000): Duplicate entry '432-2077-AUTHOR' for key 'person_product.PRIMARY'
+
+Jose Escribano (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1128-2077-AUTHOR' for key 'person_product.PRIMARY'
+
+Sandra (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1129-2077-AUTHOR' for key 'person_product.PRIMARY'
+
+Sandra M. Truscott (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1130-2077-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-2078-AUTHOR' for key 'person_product.PRIMARY'
+
+Joachim Masannek (INSERT Author to Book): 37 1062 (23000): Duplicate entry '486-2079-AUTHOR' for key 'person_product.PRIMARY'
+
+Dugald A. Steer (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1131-2080-AUTHOR' for key 'person_product.PRIMARY'
+
+Ernest Drake (INSERT Author to Book): 37 1062 (23000): Duplicate entry '415-2080-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-2081-AUTHOR' for key 'person_product.PRIMARY'
+
+Ulf Blanck (INSERT Author to Book): 37 1062 (23000): Duplicate entry '411-2082-AUTHOR' for key 'person_product.PRIMARY'
+
+Liz Kessler (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1132-2083-AUTHOR' for key 'person_product.PRIMARY'
+
+Sue Townsend (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1133-2084-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Brezina (INSERT Author to Book): 37 1062 (23000): Duplicate entry '441-2085-AUTHOR' for key 'person_product.PRIMARY'
+
+Janosch (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1134-2086-AUTHOR' for key 'person_product.PRIMARY'
+
 3551355711 (n_pages): 31 Missing number of pages
+
+Tonke Dragt (INSERT Author to Book): 37 1062 (23000): Duplicate entry '491-2088-AUTHOR' for key 'person_product.PRIMARY'
+
+Felix Janosa (INSERT Author to Book): 37 1062 (23000): Duplicate entry '419-2089-AUTHOR' for key 'person_product.PRIMARY'
+
+Jörg Hilbert (INSERT Author to Book): 37 1062 (23000): Duplicate entry '420-2089-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-2090-AUTHOR' for key 'person_product.PRIMARY'
+
+Cornelia Funke (INSERT Author to Book): 37 1062 (23000): Duplicate entry '400-2091-AUTHOR' for key 'person_product.PRIMARY'
+
+Robert L. Stine (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1135-2093-AUTHOR' for key 'person_product.PRIMARY'
 
 B000BKHF9I (region_code): 26 Missing region code
 
@@ -608,9 +1162,21 @@ B000BYMHBA (label): 18 Missing label
 
 B0006ULVPM (name): 16 Missing name
 
+Al (INSERT Author to Book): 37 1062 (23000): Duplicate entry '34-2225-AUTHOR' for key 'person_product.PRIMARY'
+
+Herdis Albrecht (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1196-2225-AUTHOR' for key 'person_product.PRIMARY'
+
+Julia Boehme (INSERT Author to Book): 37 1062 (23000): Duplicate entry '405-2225-AUTHOR' for key 'person_product.PRIMARY'
+
 3866151470 (n_pages): 31 Missing number of pages
 
 B000850GXI (isbn): 30 Missing ISBN
+
+Willi Fährmann (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1197-2228-AUTHOR' for key 'person_product.PRIMARY'
+
+Frances Hodgson Burnett (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1198-2229-AUTHOR' for key 'person_product.PRIMARY'
+
+Mary Pope Osborne (INSERT Author to Book): 37 1062 (23000): Duplicate entry '8-2230-AUTHOR' for key 'person_product.PRIMARY'
 
 3938333006 (n_pages): 31 Missing number of pages
 
@@ -641,6 +1207,16 @@ B0007VCZ50 (duration): 25 Missing duration
 3593379007 (n_pages): 31 Missing number of pages
 
 3935036590 (n_pages): 31 Missing number of pages
+
+Al (INSERT Author to Book): 37 1062 (23000): Duplicate entry '34-2301-AUTHOR' for key 'person_product.PRIMARY'
+
+Isabel Allende (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1228-2301-AUTHOR' for key 'person_product.PRIMARY'
+
+Svenja Becker (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1229-2301-AUTHOR' for key 'person_product.PRIMARY'
+
+Thomas Brezina (INSERT Author to Book): 37 1062 (23000): Duplicate entry '441-2302-AUTHOR' for key 'person_product.PRIMARY'
+
+Monika Feth (INSERT Author to Book): 37 1062 (23000): Duplicate entry '1230-2303-AUTHOR' for key 'person_product.PRIMARY'
 
 B00005AU53 (label): 18 Missing label
 
@@ -36009,6 +36585,8 @@ B000002SQ6 (product): 6 Missing reviewed product
 B00002R2TN (product): 6 Missing reviewed product
 
 B00000ES8F (product): 6 Missing reviewed product
+
+Error 37: 288
 
 Error 19: 43
 
